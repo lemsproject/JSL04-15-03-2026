@@ -124,3 +124,15 @@ function updateColumnCounts() {
     `In Progress (${counts["in-progress"]})`;
   document.getElementById("doneText").textContent = `Done (${counts.done})`;
 }
+/**
+ * Sets up event listeners for modal buttons
+ */
+function setupModalEvents() {
+  document
+    .getElementById("close-modal-btn")
+    .addEventListener("click", closeModal);
+
+  document
+    .getElementById("save-task-btn")
+    .addEventListener("click", saveTaskChanges);
+}
