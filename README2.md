@@ -43,3 +43,5 @@ TAKES ABOUT 4 HOURS TO COMPLETE.
 As a beginner developer, i will take my time to understand each step and implement it carefully. I will also refer to the Figma design frequently to ensure that my implementation matches the design specifications. I will break down the project into smaller tasks and tackle them one at a time, starting with dynamically generating task elements and then moving on to implementing the modal functionality. I will also make sure to test my code regularly to catch any issues early on. I will also seek help from my peers or instructors if I encounter any challenges along the way. Overall, I am excited to work on this project and enhance my skills in DOM manipulation, event handling, and responsive design.
 
 was really challenging but i learned a lot from it. I had to break down the project into smaller tasks and tackle them one at a time, which helped me stay organized and focused. I also had to refer to the Figma design frequently to ensure that my implementation matched the design specifications.
+
+Module-04 LEOKAS25577_PTO2508_Leonard-M-Kasimu_JSL04_2026
