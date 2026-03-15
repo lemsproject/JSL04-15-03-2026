@@ -48,6 +48,7 @@ function clearColumns() {
     .querySelectorAll(".tasks-container")
     .forEach((container) => (container.innerHTML = ""));
 }
+
 /**
  * Creates a DOM element representing a task card
  * @param {Object} task - The task object with id, title, description, status
