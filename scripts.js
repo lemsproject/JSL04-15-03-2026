@@ -65,3 +65,40 @@ function createTaskCard(task) {
   taskDiv.addEventListener("click", () => openTaskModal(task.id));
   return taskDiv;
 }
+/**
+ * Opens the modal dialog and populates it with the selected task's information
+ * @param {number} taskId - The ID of the task to display in the modal
+ */
+function openTaskModal(taskId) {
+  const task = tasks.find((t) => t.id === taskId);
+  if (!task) return;
+
+  selectedTaskId = taskId;
+
+  document.getElementById("task-title").value = task.title;
+  document.getElementById("task-desc").value = task.description;
+  document.getElementById("task-status").value = task.status;
+
+  document.getElementById("task-modal").showModal();
+}
+/**
+ * Closes the modal dialog
+ */
+function closeModal() {
+  document.getElementById("task-modal").close();
+}
+
+/**
+ * Saves the changes made in the modal to the selected task and updates the UI
+ */
+function saveTaskChanges() {
+  const task = tasks.find((t) => t.id === selectedTaskId);
+  if (!task) return;
+
+  task.title = document.getElementById("task-title").value;
+  task.description = document.getElementById("task-desc").value;
+  task.status = document.getElementById("task-status").value;
+
+  renderTasks();
+  closeModal();
+}
