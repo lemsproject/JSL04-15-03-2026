@@ -102,3 +102,25 @@ function saveTaskChanges() {
   renderTasks();
   closeModal();
 }
+/**
+ * Updates the column header text to show the current count of tasks in each status
+ */
+function updateColumnCounts() {
+  const counts = {
+    "to-do": 0,
+    "in-progress": 0,
+    done: 0,
+  };
+
+  tasks.forEach((task) => {
+    if (counts[task.status] !== undefined) {
+      counts[task.status]++;
+    }
+  });
+
+  document.getElementById("toDoText").textContent =
+    `To Do (${counts["to-do"]})`;
+  document.getElementById("doingText").textContent =
+    `In Progress (${counts["in-progress"]})`;
+  document.getElementById("doneText").textContent = `Done (${counts.done})`;
+}
