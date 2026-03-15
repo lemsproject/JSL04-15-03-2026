@@ -39,3 +39,28 @@ function renderTasks() {
 
   updateColumnCounts();
 }
+
+/**
+ * Clears all task cards from the UI columns
+ */
+function clearColumns() {
+  document
+    .querySelectorAll(".tasks-container")
+    .forEach((container) => (container.innerHTML = ""));
+}
+/**
+ * Creates a DOM element representing a task card
+ * @param {Object} task - The task object with id, title, description, status
+ * @param {number} task.id - Unique identifier for the task
+ * @param {string} task.title - Title of the task
+ * @param {string} task.description - Description of the task
+ * @param {string} task.status - Current status of the task
+ * @returns {HTMLElement} The task card element
+ */
+function createTaskCard(task) {
+  const taskDiv = document.createElement("div");
+  taskDiv.classList.add("task-div");
+  taskDiv.textContent = task.title;
+  taskDiv.addEventListener("click", () => openTaskModal(task.id));
+  return taskDiv;
+}
