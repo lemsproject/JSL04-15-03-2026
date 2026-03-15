@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderTasks();
   setupModalEvents();
 });
+
 /**
  * Render all tasks into their correct columns based on status
  */
